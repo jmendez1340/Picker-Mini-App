@@ -1,26 +1,339 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9df-wN-2tY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Character-->
+        <scene sceneID="ghx-AU-X83">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XPd-JN-LIh" customClass="CharactersViewController" customModule="Picker_Mini_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="WLb-qO-imP"/>
+                        <viewControllerLayoutGuide type="bottom" id="DSc-JY-kma"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="PjC-i3-aYx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-61-73G">
+                                <rect key="frame" x="165" y="249" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="XPd-JN-LIh" eventType="touchUpInside" id="ixz-Vy-gBu"/>
+                                </connections>
+                            </button>
+                            <pickerView clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Jv-aU-MZp">
+                                <rect key="frame" x="27" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XPd-JN-LIh" id="sos-yK-HRY"/>
+                                    <outlet property="delegate" destination="XPd-JN-LIh" id="but-MH-In0"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-L7-T51">
+                                <rect key="frame" x="173" y="318" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="Play:" destination="XPd-JN-LIh" eventType="touchUpInside" id="h9k-wK-q2I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZB-jJ-Mh0">
+                                <rect key="frame" x="167" y="378" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="Pause:" destination="XPd-JN-LIh" eventType="touchUpInside" id="mzs-QC-ht6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-dE-uDa">
+                                <rect key="frame" x="165" y="439" width="46" height="30"/>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="Replay:" destination="XPd-JN-LIh" eventType="touchUpInside" id="E3W-wK-WgS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54783690330000001" green="1" blue="0.8354657687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Jv-aU-MZp" firstAttribute="top" secondItem="PjC-i3-aYx" secondAttribute="top" id="2Iz-g0-mf4"/>
+                            <constraint firstItem="Cag-dE-uDa" firstAttribute="top" secondItem="1ZB-jJ-Mh0" secondAttribute="bottom" constant="31" id="4F4-9H-eqy"/>
+                            <constraint firstItem="Cag-dE-uDa" firstAttribute="centerX" secondItem="PjC-i3-aYx" secondAttribute="centerX" id="6Zt-wh-F36"/>
+                            <constraint firstItem="1ZB-jJ-Mh0" firstAttribute="centerX" secondItem="PjC-i3-aYx" secondAttribute="centerX" id="7zX-vr-D0O"/>
+                            <constraint firstItem="0Jv-aU-MZp" firstAttribute="centerX" secondItem="PjC-i3-aYx" secondAttribute="centerX" id="Qe9-h2-bgv"/>
+                            <constraint firstItem="YDg-61-73G" firstAttribute="top" secondItem="0Jv-aU-MZp" secondAttribute="bottom" constant="33" id="SLK-Xc-ES4"/>
+                            <constraint firstItem="YDg-61-73G" firstAttribute="centerX" secondItem="PjC-i3-aYx" secondAttribute="centerX" id="bTe-ks-dUO"/>
+                            <constraint firstItem="IPx-L7-T51" firstAttribute="top" secondItem="YDg-61-73G" secondAttribute="bottom" constant="39" id="f10-Ez-Jo8"/>
+                            <constraint firstItem="IPx-L7-T51" firstAttribute="centerX" secondItem="PjC-i3-aYx" secondAttribute="centerX" id="n5p-d0-mEU"/>
+                            <constraint firstItem="1ZB-jJ-Mh0" firstAttribute="top" secondItem="IPx-L7-T51" secondAttribute="bottom" constant="30" id="rXS-ZE-sIm"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Character" image="Ragnell" id="Pw2-0y-ePe"/>
+                    <connections>
+                        <outlet property="friendPicker" destination="0Jv-aU-MZp" id="r5l-4C-65e"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba9-ii-j6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-218" y="-307"/>
+        </scene>
+        <!--Marriage-->
+        <scene sceneID="qW5-no-aVu">
+            <objects>
+                <viewController id="tTD-sh-DWl" customClass="MarriageViewController" customModule="Picker_Mini_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m7B-Ei-5fi"/>
+                        <viewControllerLayoutGuide type="bottom" id="pa9-sS-IbN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQQ-kR-lpo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTE-Vj-pjG">
+                                <rect key="frame" x="28" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tTD-sh-DWl" id="e6y-St-uNr"/>
+                                    <outlet property="delegate" destination="tTD-sh-DWl" id="MM1-FM-qSx"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsK-2K-H7m">
+                                <rect key="frame" x="166" y="262" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="tTD-sh-DWl" eventType="touchUpInside" id="Hao-Kl-HSb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hox-Re-fqn">
+                                <rect key="frame" x="172" y="327" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="Play:" destination="tTD-sh-DWl" eventType="touchUpInside" id="LiU-kU-xcD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iz-Cz-0XZ">
+                                <rect key="frame" x="164" y="462" width="46" height="30"/>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="Replay:" destination="tTD-sh-DWl" eventType="touchUpInside" id="wjb-ab-orv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T30-np-akJ">
+                                <rect key="frame" x="166" y="394" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="Pause:" destination="tTD-sh-DWl" eventType="touchUpInside" id="sXT-vy-XWU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54783690330000001" green="1" blue="0.8354657687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4iz-Cz-0XZ" firstAttribute="centerX" secondItem="gQQ-kR-lpo" secondAttribute="centerX" id="7Qe-9l-BD3"/>
+                            <constraint firstItem="Hox-Re-fqn" firstAttribute="top" secondItem="tsK-2K-H7m" secondAttribute="bottom" constant="35" id="91A-Dd-TFK"/>
+                            <constraint firstItem="Hox-Re-fqn" firstAttribute="centerX" secondItem="gQQ-kR-lpo" secondAttribute="centerX" id="B08-5G-6Mf"/>
+                            <constraint firstItem="tsK-2K-H7m" firstAttribute="centerX" secondItem="gQQ-kR-lpo" secondAttribute="centerX" id="FZ2-sh-pXq"/>
+                            <constraint firstItem="oTE-Vj-pjG" firstAttribute="centerX" secondItem="gQQ-kR-lpo" secondAttribute="centerX" id="HuT-Kg-T9B"/>
+                            <constraint firstItem="4iz-Cz-0XZ" firstAttribute="top" secondItem="T30-np-akJ" secondAttribute="bottom" constant="38" id="IUo-0h-dtK"/>
+                            <constraint firstItem="T30-np-akJ" firstAttribute="centerX" secondItem="gQQ-kR-lpo" secondAttribute="centerX" id="JWc-Jn-BJj"/>
+                            <constraint firstItem="oTE-Vj-pjG" firstAttribute="top" secondItem="gQQ-kR-lpo" secondAttribute="top" id="cEl-cl-Aey"/>
+                            <constraint firstItem="tsK-2K-H7m" firstAttribute="top" secondItem="oTE-Vj-pjG" secondAttribute="bottom" constant="46" id="huh-aG-Y6U"/>
+                            <constraint firstItem="T30-np-akJ" firstAttribute="top" secondItem="Hox-Re-fqn" secondAttribute="bottom" constant="37" id="w9S-Hy-1eW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Marriage" image="Swordofseals copy" id="aQ0-Uj-SjH"/>
+                    <connections>
+                        <outlet property="marriagePicker" destination="oTE-Vj-pjG" id="JXs-yr-jJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bD7-Y8-5m7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-307"/>
+        </scene>
+        <!--Class-->
+        <scene sceneID="Utf-zB-IzW">
+            <objects>
+                <viewController id="m7z-do-LFl" customClass="ClassViewController" customModule="Picker_Mini_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KJu-nJ-41N"/>
+                        <viewControllerLayoutGuide type="bottom" id="G1G-i2-KNi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gOa-dF-5Hj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-hJ-8dq">
+                                <rect key="frame" x="27" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="m7z-do-LFl" id="VNW-cj-ftX"/>
+                                    <outlet property="delegate" destination="m7z-do-LFl" id="3xG-U2-n51"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDc-88-jJ6">
+                                <rect key="frame" x="165" y="296" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="m7z-do-LFl" eventType="touchUpInside" id="JrS-fP-VDl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bB3-Ou-ax5">
+                                <rect key="frame" x="166" y="428" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="Pause:" destination="m7z-do-LFl" eventType="touchUpInside" id="KEf-qH-mT4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaH-Px-0ek">
+                                <rect key="frame" x="164" y="506" width="46" height="30"/>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="Replay:" destination="m7z-do-LFl" eventType="touchUpInside" id="wex-TY-OnR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Fighting Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt2-9u-S16">
+                                <rect key="frame" x="82" y="224" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUh-WD-Wjb">
+                                <rect key="frame" x="172.5" y="357" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="Play:" destination="m7z-do-LFl" eventType="touchUpInside" id="guB-0V-Uqb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54783690330000001" green="1" blue="0.8354657687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bB3-Ou-ax5" firstAttribute="top" secondItem="nUh-WD-Wjb" secondAttribute="bottom" constant="41" id="0cy-4i-wLe"/>
+                            <constraint firstItem="nUh-WD-Wjb" firstAttribute="centerX" secondItem="gOa-dF-5Hj" secondAttribute="centerX" id="8dh-bs-ruz"/>
+                            <constraint firstItem="iDc-88-jJ6" firstAttribute="top" secondItem="rt2-9u-S16" secondAttribute="bottom" constant="51" id="Bos-Gx-hWY"/>
+                            <constraint firstItem="iDc-88-jJ6" firstAttribute="centerX" secondItem="gOa-dF-5Hj" secondAttribute="centerX" id="MhQ-RG-g5g"/>
+                            <constraint firstItem="bB3-Ou-ax5" firstAttribute="centerX" secondItem="gOa-dF-5Hj" secondAttribute="centerX" id="S7X-Q3-k1Y"/>
+                            <constraint firstItem="CaH-Px-0ek" firstAttribute="centerX" secondItem="gOa-dF-5Hj" secondAttribute="centerX" id="ZF4-w7-8F6"/>
+                            <constraint firstItem="CaH-Px-0ek" firstAttribute="top" secondItem="bB3-Ou-ax5" secondAttribute="bottom" constant="48" id="bNA-oJ-zW0"/>
+                            <constraint firstItem="nUh-WD-Wjb" firstAttribute="top" secondItem="iDc-88-jJ6" secondAttribute="bottom" constant="31" id="nxW-ma-WvT"/>
+                            <constraint firstItem="Vyk-hJ-8dq" firstAttribute="top" secondItem="gOa-dF-5Hj" secondAttribute="top" id="p6k-fL-lvv"/>
+                            <constraint firstItem="rt2-9u-S16" firstAttribute="centerX" secondItem="gOa-dF-5Hj" secondAttribute="centerX" id="qXN-Y0-ZEQ"/>
+                            <constraint firstItem="Vyk-hJ-8dq" firstAttribute="centerX" secondItem="gOa-dF-5Hj" secondAttribute="centerX" id="uTC-jL-ZNU"/>
+                            <constraint firstItem="rt2-9u-S16" firstAttribute="top" secondItem="Vyk-hJ-8dq" secondAttribute="bottom" constant="8" id="zbz-aA-Y7b"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Class" image="Tyrfing" id="aAY-Y1-325"/>
+                    <connections>
+                        <outlet property="classPicker" destination="Vyk-hJ-8dq" id="iAM-N2-WWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzu-6a-DuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505" y="-307"/>
+        </scene>
+        <!--Games-->
+        <scene sceneID="Ob3-Uv-v75">
+            <objects>
+                <viewController id="mIK-KI-ekZ" customClass="GamesViewController" customModule="Picker_Mini_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1im-EL-7j2"/>
+                        <viewControllerLayoutGuide type="bottom" id="6lr-ab-kd1"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Oyq-lf-ymy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-bU-fw3">
+                                <rect key="frame" x="28" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mIK-KI-ekZ" id="24C-aq-IPa"/>
+                                    <outlet property="delegate" destination="mIK-KI-ekZ" id="cqV-o3-LjD"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP8-dN-Arp">
+                                <rect key="frame" x="166" y="318" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="mIK-KI-ekZ" eventType="touchUpInside" id="sip-dm-tZ3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Favorites!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyx-yK-gzi">
+                                <rect key="frame" x="99" y="261" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXC-gh-yd7">
+                                <rect key="frame" x="172" y="392" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="Play:" destination="mIK-KI-ekZ" eventType="touchUpInside" id="LZi-cs-89S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUY-zi-4zp">
+                                <rect key="frame" x="167" y="446" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="Pause:" destination="mIK-KI-ekZ" eventType="touchUpInside" id="A6M-QB-Wzi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-cU-GLd">
+                                <rect key="frame" x="164.5" y="497" width="46" height="30"/>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="Replay:" destination="mIK-KI-ekZ" eventType="touchUpInside" id="KoX-MP-Znr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54783690330000001" green="1" blue="0.8354657687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p3m-cU-GLd" firstAttribute="centerX" secondItem="Oyq-lf-ymy" secondAttribute="centerX" id="1YD-yD-qc6"/>
+                            <constraint firstItem="OP8-dN-Arp" firstAttribute="top" secondItem="PDE-bU-fw3" secondAttribute="bottom" constant="102" id="Awu-WX-RCq"/>
+                            <constraint firstItem="zUY-zi-4zp" firstAttribute="top" secondItem="xXC-gh-yd7" secondAttribute="bottom" constant="24" id="G2t-kX-DrA"/>
+                            <constraint firstItem="Dyx-yK-gzi" firstAttribute="top" secondItem="PDE-bU-fw3" secondAttribute="bottom" constant="45" id="IS3-Ga-XTm"/>
+                            <constraint firstItem="xXC-gh-yd7" firstAttribute="centerX" secondItem="Oyq-lf-ymy" secondAttribute="centerX" id="PWp-0s-e5N"/>
+                            <constraint firstItem="PDE-bU-fw3" firstAttribute="top" secondItem="Oyq-lf-ymy" secondAttribute="top" id="Pw9-Ok-Ahq"/>
+                            <constraint firstItem="OP8-dN-Arp" firstAttribute="centerX" secondItem="Oyq-lf-ymy" secondAttribute="centerX" id="WZX-Qe-hOx"/>
+                            <constraint firstItem="PDE-bU-fw3" firstAttribute="centerX" secondItem="Oyq-lf-ymy" secondAttribute="centerX" id="kCC-mK-4U8"/>
+                            <constraint firstItem="Dyx-yK-gzi" firstAttribute="centerX" secondItem="Oyq-lf-ymy" secondAttribute="centerX" id="lUx-nS-9FQ"/>
+                            <constraint firstItem="p3m-cU-GLd" firstAttribute="top" secondItem="zUY-zi-4zp" secondAttribute="bottom" constant="21" id="mrq-VJ-V8Z"/>
+                            <constraint firstItem="zUY-zi-4zp" firstAttribute="centerX" secondItem="Oyq-lf-ymy" secondAttribute="centerX" id="qK8-tU-IBF"/>
+                            <constraint firstItem="xXC-gh-yd7" firstAttribute="top" secondItem="OP8-dN-Arp" secondAttribute="bottom" constant="44" id="u3h-Wr-tUQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Games" image="Falchion_FE3" id="YyI-3e-QYj"/>
+                    <connections>
+                        <outlet property="favoritePicker" destination="PDE-bU-fw3" id="xiW-am-ILH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slF-qP-y27" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="-307.1964017991005"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vkB-WK-jFW">
+            <objects>
+                <tabBarController id="9df-wN-2tY" customClass="ViewController" customModule="Picker_Mini_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3dy-k4-gnF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mIK-KI-ekZ" kind="relationship" relationship="viewControllers" id="oLL-Y6-8mJ"/>
+                        <segue destination="XPd-JN-LIh" kind="relationship" relationship="viewControllers" id="DRg-SL-gHC"/>
+                        <segue destination="tTD-sh-DWl" kind="relationship" relationship="viewControllers" id="oVy-y1-hXd"/>
+                        <segue destination="m7z-do-LFl" kind="relationship" relationship="viewControllers" id="Bla-TD-Th7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKQ-s0-BmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1822" y="80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Falchion_FE3" width="16" height="16"/>
+        <image name="Ragnell" width="24" height="24"/>
+        <image name="Swordofseals copy" width="16" height="16"/>
+        <image name="Tyrfing" width="16" height="16"/>
+    </resources>
 </document>

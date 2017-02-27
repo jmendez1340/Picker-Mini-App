@@ -14,6 +14,14 @@
 		960919BB1E63794D00C381BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960919B91E63794D00C381BC /* LaunchScreen.storyboard */; };
 		960919C61E63794E00C381BC /* Picker_Mini_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960919C51E63794E00C381BC /* Picker_Mini_AppTests.swift */; };
 		960919D11E63794E00C381BC /* Picker_Mini_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960919D01E63794E00C381BC /* Picker_Mini_AppUITests.swift */; };
+		96091A1B1E63877800C381BC /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96091A1A1E63877800C381BC /* GamesViewController.swift */; };
+		96091A1D1E63878A00C381BC /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96091A1C1E63878A00C381BC /* CharactersViewController.swift */; };
+		96091A1F1E63879600C381BC /* MarriageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96091A1E1E63879600C381BC /* MarriageViewController.swift */; };
+		96091A211E6387A100C381BC /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96091A201E6387A100C381BC /* ClassViewController.swift */; };
+		96091A231E63898E00C381BC /* 208 Village Girl.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96091A221E63898E00C381BC /* 208 Village Girl.mp3 */; };
+		96091A251E6389B900C381BC /* 13 Beloved One.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96091A241E6389B900C381BC /* 13 Beloved One.mp3 */; };
+		96091A271E638B0500C381BC /* 48 Join Us!- Event.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96091A261E638B0500C381BC /* 48 Join Us!- Event.mp3 */; };
+		96091A291E638BFC00C381BC /* 02 Fire Emblem Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96091A281E638BFC00C381BC /* 02 Fire Emblem Theme.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		960919CC1E63794E00C381BC /* Picker Mini AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Picker Mini AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		960919D01E63794E00C381BC /* Picker_Mini_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker_Mini_AppUITests.swift; sourceTree = "<group>"; };
 		960919D21E63794E00C381BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96091A1A1E63877800C381BC /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		96091A1C1E63878A00C381BC /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		96091A1E1E63879600C381BC /* MarriageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarriageViewController.swift; sourceTree = "<group>"; };
+		96091A201E6387A100C381BC /* ClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		96091A221E63898E00C381BC /* 208 Village Girl.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "208 Village Girl.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/Nintendo/Fire Emblem_ Mystery of the Emblem Game Rip Soundtrack/208 Village Girl.mp3"; sourceTree = "<group>"; };
+		96091A241E6389B900C381BC /* 13 Beloved One.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "13 Beloved One.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/Yuka Tsujiyoko/Fire Emblem IV_ Genealogy of Holy War Original Soundtrack/13 Beloved One.mp3"; sourceTree = "<group>"; };
+		96091A261E638B0500C381BC /* 48 Join Us!- Event.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "48 Join Us!- Event.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/Yuka Tsujiyoko/Fire Emblem_ Sword of Seals Gamerip/48 Join Us!- Event.mp3"; sourceTree = "<group>"; };
+		96091A281E638BFC00C381BC /* 02 Fire Emblem Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "02 Fire Emblem Theme.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/Yuka Tsujiyoko/Fire Emblem IV_ Genealogy of Holy War Original Soundtrack/02 Fire Emblem Theme.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +113,20 @@
 		960919AF1E63794C00C381BC /* Picker Mini App */ = {
 			isa = PBXGroup;
 			children = (
+				96091A281E638BFC00C381BC /* 02 Fire Emblem Theme.mp3 */,
+				96091A261E638B0500C381BC /* 48 Join Us!- Event.mp3 */,
+				96091A241E6389B900C381BC /* 13 Beloved One.mp3 */,
+				96091A221E63898E00C381BC /* 208 Village Girl.mp3 */,
 				960919B01E63794C00C381BC /* AppDelegate.swift */,
 				960919B21E63794D00C381BC /* ViewController.swift */,
 				960919B41E63794D00C381BC /* Main.storyboard */,
 				960919B71E63794D00C381BC /* Assets.xcassets */,
 				960919B91E63794D00C381BC /* LaunchScreen.storyboard */,
 				960919BC1E63794D00C381BC /* Info.plist */,
+				96091A1A1E63877800C381BC /* GamesViewController.swift */,
+				96091A1C1E63878A00C381BC /* CharactersViewController.swift */,
+				96091A1E1E63879600C381BC /* MarriageViewController.swift */,
+				96091A201E6387A100C381BC /* ClassViewController.swift */,
 			);
 			path = "Picker Mini App";
 			sourceTree = "<group>";
@@ -232,9 +256,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96091A291E638BFC00C381BC /* 02 Fire Emblem Theme.mp3 in Resources */,
 				960919BB1E63794D00C381BC /* LaunchScreen.storyboard in Resources */,
 				960919B81E63794D00C381BC /* Assets.xcassets in Resources */,
+				96091A231E63898E00C381BC /* 208 Village Girl.mp3 in Resources */,
 				960919B61E63794D00C381BC /* Main.storyboard in Resources */,
+				96091A271E638B0500C381BC /* 48 Join Us!- Event.mp3 in Resources */,
+				96091A251E6389B900C381BC /* 13 Beloved One.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96091A1F1E63879600C381BC /* MarriageViewController.swift in Sources */,
+				96091A1D1E63878A00C381BC /* CharactersViewController.swift in Sources */,
 				960919B31E63794D00C381BC /* ViewController.swift in Sources */,
+				96091A211E6387A100C381BC /* ClassViewController.swift in Sources */,
+				96091A1B1E63877800C381BC /* GamesViewController.swift in Sources */,
 				960919B11E63794C00C381BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
